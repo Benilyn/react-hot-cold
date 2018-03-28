@@ -13,10 +13,9 @@ describe('<TopNav />', () => {
     wrapper.find('.what').simulate('click')
 	}); {/* Should be able to click "WHAT?" button */}
 
-{/*
 	it('Should be able to click "NEW GAME" button', () => {
     const wrapper = shallow(<TopNav />);
     wrapper.find('.new').simulate('click')
 	}); 
-*/}
+
 }); //describe('<Game/>')
