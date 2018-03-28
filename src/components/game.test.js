@@ -1,10 +1,10 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 
-import Header from './header';
+import Game from './game';
 
-describe('<Header/>', () => {
+describe('<Game />', () => {
 	it('Renders without crashing', () => {
-       shallow('<Header/>');
+       mount(<Game />);
     });
-}); //describe('<Header/>')
+}); //describe('<Game/>')

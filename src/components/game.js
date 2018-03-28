@@ -85,17 +85,17 @@ export default class Game extends React.Component {
         <Header
           onRestartGame={() => this.restartGame()}
           onGenerateAuralUpdate={() => this.generateAuralUpdate()}
-        />
+        /> {/*Header*/}
         <main role="main">
           <GuessSection
             feedback={feedback}
             guessCount={guessCount}
             onMakeGuess={guess => this.makeGuess(guess)}
-          />
+          /> {/*GuessSection*/}
           <StatusSection guesses={guesses} 
             auralStatus={auralStatus}
-          />
-          <InfoSection />
+          /> {/*StatusSection*/}
+          <InfoSection />{/*InfoSection*/}
         </main>
       </div>
     );
