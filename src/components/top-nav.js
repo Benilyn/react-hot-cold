@@ -17,7 +17,7 @@ export default function TopNav(props) {
         </li>
         <li>
           <a
-            href="#feedback"
+            href="#new"
             className="new"
             aria-label="Start a new game"
             onClick={() => props.onRestartGame()}
