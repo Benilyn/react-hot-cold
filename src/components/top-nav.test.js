@@ -20,9 +20,4 @@ describe('<TopNav />', () => {
     expect (wrapper.find('a').first().hasClass('what')).toEqual(true);
 	}); {/* Should be able to click "NEW GAME" button */}
 
-    it('Renders nav', () => {
-        const wrapper = shallow(<TopNav />);
-        expect (wrapper.find('nav').length).toEqual(1);
-    });
-
 }); //describe('<Game/>')
