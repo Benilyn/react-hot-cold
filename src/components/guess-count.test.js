@@ -1,5 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
+
 
 import GuessCount from './guess-count';
 
@@ -8,6 +9,11 @@ describe('<GuessCount />', () => {
        shallow(<GuessCount />);
     });
 
-{/* wrapper.setProps({guessCount: 3});
-	expect(wrapper.find('#count').text()).toEqual(3); */}
+	it.only('Should display guessCount', () => {
+		let guessCount;
+		const wrapper = mount(<GuessCount guessCount={3}/>);
+		console.log(wrapper.props());
+		expect(wrapper.props().guessCount).toEqual(3);
+	}); 
+
 }); //describe('<Game/>')
