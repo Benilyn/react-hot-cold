@@ -9,10 +9,8 @@ describe('<GuessCount />', () => {
        shallow(<GuessCount />);
     });
 
-	it.only('Should display guessCount', () => {
-		let guessCount;
+	it('Should display guessCount', () => {
 		const wrapper = mount(<GuessCount guessCount={3}/>);
-		console.log(wrapper.props());
 		expect(wrapper.props().guessCount).toEqual(3);
 	}); 
 
