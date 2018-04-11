@@ -8,7 +8,7 @@ describe('<GuessForm />', () => {
        shallow(<GuessForm />);
     });
 
-    it.only('should call onMakeGuess function when submit is clicked', () => {
+    it('should call onMakeGuess function when submit is clicked', () => {
     	const callback = jest.fn();
 	    const wrapper = mount(<GuessForm onMakeGuess={callback} />);
         const value = "88";
@@ -17,13 +17,13 @@ describe('<GuessForm />', () => {
         expect(callback).toHaveBeenCalledWith(value);
     
     });
-{/*
-    it('Should not fire onSubmit callback when form is empty', () => {
+
+    it.only('should not call onMakeGuess function when form is empty', () => {
         const callback = jest.fn();
         const wrapper = mount(<GuessForm onMakeGuess={callback} />);
-        wrapper.instance().setEditing(true);
+        expect(wrapper.find('input[type="number"]').instance().value).toEqual('');
         wrapper.simulate('submit');
         expect(callback).not.toHaveBeenCalled();
     });
-*/}
+
 }); 
