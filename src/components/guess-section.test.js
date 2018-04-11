@@ -11,7 +11,6 @@ describe('<GuessSection />', () => {
     it('Renders Feedback', () => {
     	const wrapper = mount(<GuessSection feedback="ok" guessCount={3}/>);
     	expect (wrapper.find('Feedback').length).toEqual(1);
-    	console.log(wrapper.props());
     	expect (wrapper.props().feedback).toEqual("ok");
     	expect (wrapper.props().guessCount).toEqual(3);
     });
