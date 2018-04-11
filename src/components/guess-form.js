@@ -5,8 +5,8 @@ import './guess-form.css';
 export default class GuessForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
-
-    if (this.props.onMakeGuess) {
+    const text = this.input.value.trim();
+    if (text && this.props.onMakeGuess) {
       const value = this.input.value;
       this.props.onMakeGuess(value);
     }
