@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 
 import AuralStatus from './aural-status';
 
@@ -8,15 +8,9 @@ describe('<AurialStatus />', () => {
        shallow(<AuralStatus />);
     });
 
-{/*    it.only('Renders AuralStatus', () => {
+    it.only('Renders AuralStatus', () => {
     	const auralStatus = "testing";
-    	const wrapper = shallow(<AuralStatus auralStatus={auralStatus} />);
-    	expect (wrapper.contains(<p id="status-readout">{auralStatus}</p>)).toEqual(true);
-    	console.log(auralStatus);
+    	const wrapper = mount(<AuralStatus auralStatus={auralStatus} />);
+    	expect (wrapper.find('p').text()).toEqual(auralStatus);
     });
-*/}
-	it('Renders AuralStatus', () => {
-		const wrapper = shallow(<AuralStatus />);
-		expect (wrapper.find('p').length).toEqual(1);
-	});
 }); 
